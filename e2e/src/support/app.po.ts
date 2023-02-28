@@ -1,1 +1,1 @@
-export const getGreeting = () => cy.get('h1');
+export const getHome = () => cy.get('ngui-home');

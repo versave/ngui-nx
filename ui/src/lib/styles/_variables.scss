@@ -1,0 +1,20 @@
+/* Font */
+$font-primary: 'Helvetica', sans-serif;
+
+/* colors */
+$color-white: #fff;
+
+$font-size-body: 16px;
+
+/* Grid */
+$container-width: 1140px;
+$container-gap: 10px;
+
+/* Breakpoints */
+$breakpoints: (
+    phone-xs: 400px,
+    phone: 650px,
+    tablet: 968px,
+    tablet-landscape: 1024px,
+    desktop: 1440px,
+);

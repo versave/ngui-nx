@@ -1,13 +1,13 @@
-import { getGreeting } from '../support/app.po';
+import { getHome } from '../support/app.po';
 
 describe('ngui-nx', () => {
-  beforeEach(() => cy.visit('/'));
+    beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+    it('should display home page', () => {
+        // Custom command example, see `../support/commands.ts` file
+        cy.login('my-email@something.com', 'myPassword');
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome ngui-nx');
-  });
+        // Function helper example, see `../support/app.po.ts` file
+        getHome().should('be.visible');
+    });
 });

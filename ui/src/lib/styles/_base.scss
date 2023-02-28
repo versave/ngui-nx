@@ -1,0 +1,91 @@
+//html {
+//    height: 100%;
+//}
+//
+//body {
+//    min-width: 320px;
+//    height: 100%;
+//    background: $black;
+//    font-family: $fontBody;
+//    font-size: $fontBase;
+//    color: $white;
+//}
+//
+//a {
+//    color: inherit;
+//    text-decoration: underline;
+//    transition: .3s ease;
+//
+//    &:hover,
+//    &[href^="tel"] {
+//        text-decoration: none;
+//    }
+//}
+//
+//h1,
+//h2,
+//h3,
+//h4,
+//h5,
+//h6 {
+//    margin-bottom: 40px;
+//    font-family: $fontHeading;
+//    font-weight: 400;
+//}
+//
+//h1 {
+//    font-size: 60px;
+//
+//    @media (max-width: $breakpoint-md) {
+//        font-size: 50px;
+//    }
+//    @media (max-width: $breakpoint-sm) {
+//        font-size: 45px;
+//    }
+//
+//}
+//
+//h2 {
+//    font-size: 40px;
+//}
+//
+//h3 {
+//    font-size: 34px;
+//}
+//
+//h4 {
+//    font-size: 28px;
+//}
+//
+//h5 {
+//    font-size: 22px;
+//}
+//
+//h6 {
+//    font-size: 18px;
+//}
+//
+//p,
+//ul,
+//ol,
+//dl,
+//hr,
+//table,
+//blockquote {
+//    margin-bottom: 16px;
+//}
+//
+//h1:last-child,
+//h2:last-child,
+//h3:last-child,
+//h4:last-child,
+//h5:last-child,
+//h6:last-child,
+//p:last-child,
+//ul:last-child,
+//ol:last-child,
+//dl:last-child,
+//table:last-child,
+//blockquote:last-child {
+//    margin-bottom: 0;
+//}

@@ -1,1 +1,7 @@
-<ngui-nx-nx-welcome></ngui-nx-nx-welcome> <router-outlet></router-outlet>
+<ngui-shell *ngIf="useShell; else outlet">
+    <ng-container *ngTemplateOutlet="outlet"></ng-container>
+</ngui-shell>
+
+<ng-template #outlet>
+    <router-outlet></router-outlet>
+</ng-template>
