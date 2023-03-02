@@ -1,0 +1,52 @@
+@use "layout" as *;
+@use "layout-variables" as *;
+@use "typography-variables" as *;
+
+body {
+    font-family: $font-primary;
+    font-size: $font-xxs;
+}
+
+h1, .font-heading-1 {
+    margin-bottom: $spacing-xxs;
+    font-size: $font-xxxl;
+}
+h2, .font-heading-2 {
+    margin-bottom: $spacing-xs;
+    font-size: $font-xxl;
+}
+h3, .font-heading-3 {
+    margin-bottom: $spacing-xs;
+    font-size: $font-xl;
+}
+h4, .font-heading-4 {
+    margin-bottom: $spacing-xs;
+    font-size: $font-l;
+}
+h5, .font-heading-5 {
+    margin-bottom: $spacing-xxs;
+    font-size: $font-m;
+}
+h6, .font-heading-6 {
+    margin-bottom: $spacing-xxs;
+    font-size: $font-s;
+}
+
+p {
+    margin-bottom: $spacing-xs;
+}
+
+.font-caption {
+    margin-bottom: $spacing-xs;
+    font-size: $font-xs;
+}
+
+.font-body {
+    margin-bottom: $spacing-xs;
+    font-size: $font-xxs;
+}
+
+.font-micro {
+    margin-bottom: $spacing-xs;
+    font-size: $font-xxxs;
+}
