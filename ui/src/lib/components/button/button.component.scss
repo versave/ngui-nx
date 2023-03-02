@@ -1,0 +1,26 @@
+@use "/ui/src/lib/styles/layout-variables" as *;
+@use "/ui/src/lib/styles/color-variables" as *;
+@use "/ui/src/lib/styles/typography-variables" as *;
+
+.button {
+    display: inline-block;
+    border: none;
+    padding: $spacing-xs $spacing-l;
+    background: $color-black;
+    font-size: $font-xs;
+    color: $color-white;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        box-shadow: 1px 1px 8px -2px $color-black;
+    }
+}
+
+.loading,
+.disabled {
+    background: $color-gray;
+    color: $color-black;
+    pointer-events: none;
+}

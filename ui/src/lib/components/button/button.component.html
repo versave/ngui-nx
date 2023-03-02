@@ -1,1 +1,19 @@
-<p>button works!</p>
+<button
+    *ngIf="elementType === 'button'"
+    [type]="buttonType"
+    [class.loading]="loading"
+    [class.disabled]="disabled"
+    class="button"
+>
+    {{ label }}
+</button>
+
+<a
+    *ngIf="elementType === 'link'"
+    [class.loading]="loading"
+    [class.disabled]="disabled"
+    [href]="href"
+    class="button"
+>
+    {{ label }}
+</a>
