@@ -4,6 +4,7 @@ import { ShellComponent } from './components/shell/shell.component';
 import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { filter, map } from 'rxjs';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { MetaHandlerService } from './services/meta-handler/meta-handler.service';
 
 @UntilDestroy()
 @Component({
@@ -16,7 +17,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 export class AppComponent implements OnInit {
     public useShell = true;
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private metaHandlerService: MetaHandlerService) {}
 
     public ngOnInit(): void {
         this.handleRouteData();
@@ -31,6 +32,7 @@ export class AppComponent implements OnInit {
             )
             .subscribe((routeData) => {
                 this.useShell = (routeData?.['useShell'] as boolean) ?? true;
+                this.metaHandlerService.initDefaultMetaTags();
             });
     }
 }
