@@ -1,0 +1,12 @@
+<div class="container">
+    <p *ngIf="label" class="label font-caption">{{ label }}</p>
+
+    <div class="field">
+        <select
+            [formControl]="formControl"
+            (ngModelChange)="selectChange.emit($event)"
+        >
+            <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+        </select>
+    </div>
+</div>

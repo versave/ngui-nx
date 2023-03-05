@@ -1,0 +1,66 @@
+@use "/ui/src/lib/styles/layout-variables" as *;
+@use "/ui/src/lib/styles/color-variables" as *;
+
+$checkbox-size: 16px;
+
+.container {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+
+    input {
+        display: none;
+    }
+
+    &.checked {
+        .icon {
+            background: $color-black;
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.invalid {
+        .label {
+            color: $color-red;
+        }
+    }
+}
+
+.icon {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    flex-shrink: 0;
+    border: 2px solid $color-black;
+    border-radius: 2px;
+    margin-right: $spacing-xs;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        transform: rotate(45deg);
+        width: 6px;
+        height: 11px;
+        margin-top: -2px;
+        border-bottom: 2px solid $color-white;
+        border-right: 2px solid $color-white;
+        opacity: 0;
+    }
+}
+
+.label {
+    position: relative;
+    top: -1px;
+}
+
+.loading,
+.disabled {
+    pointer-events: none;
+    opacity: .6;
+}

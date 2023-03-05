@@ -1,0 +1,16 @@
+<div class="container" [class.invalid]="!fieldValid()">
+    <label>
+        <span class="label font-caption" *ngIf="label">{{ label }}</span>
+
+        <div class="field">
+            <input
+                [formControl]="formControl"
+                [type]="type"
+                [placeholder]="placeholder"
+                (ngModelChange)="inputChange.emit($event)"
+            >
+        </div>
+
+        <p *ngIf="errorWarning && !fieldValid()" class="error font-micro">{{ errorWarning }}</p>
+    </label>
+</div>

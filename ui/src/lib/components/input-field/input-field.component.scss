@@ -1,0 +1,45 @@
+@use "/ui/src/lib/styles/layout-variables" as *;
+@use "/ui/src/lib/styles/color-variables" as *;
+
+$field-height: 40px;
+
+.container {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+.label {
+    display: block;
+    margin-bottom: $spacing-xxs;
+}
+
+.error {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: $spacing-xxs;
+    color: $color-red;
+}
+
+.field {
+    input {
+        display: block;
+        width: 100%;
+        height: $field-height;
+        border: 2px solid $color-black;
+        border-radius: 3px;
+        padding: 0 $spacing-xxs;
+    }
+}
+
+.invalid {
+    input {
+        border-color: $color-red;
+        color: $color-red;
+
+        &::placeholder {
+            color: $color-red;
+        }
+    }
+}

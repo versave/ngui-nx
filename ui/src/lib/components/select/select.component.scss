@@ -1,0 +1,51 @@
+@use "/ui/src/lib/styles/layout-variables" as *;
+@use "/ui/src/lib/styles/color-variables" as *;
+
+$select-height: 40px;
+$chevron-size: 10px;
+$select-left-padding: $spacing-xxs;
+$select-right-padding: $spacing-m;
+
+
+.label {
+    margin-bottom: $spacing-xxs;
+}
+
+.field {
+    position: relative;
+
+    select {
+        width: 100%;
+        height: $select-height;
+        border: 2px solid $color-black;
+        border-radius: 2px;
+        padding: 0 $select-right-padding 0 $select-left-padding;
+        appearance: none;
+        cursor: pointer;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: $spacing-xs;
+        transform: translateY(-50%) rotate(135deg);
+
+        margin-top: -1px;
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        display: inline-block;
+        height: $chevron-size;
+        width: $chevron-size;
+        pointer-events: none;
+    }
+}
+
+.placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 $select-right-padding 0 $select-left-padding;
+    pointer-events: none;
+}

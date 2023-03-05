@@ -1,0 +1,14 @@
+<div class="container">
+    <label *ngFor="let option of options" [class.checked]="formControl.value === option.value">
+        <input
+            type="radio"
+            [formControl]="formControl"
+            [value]="option.value"
+            (ngModelChange)="radioChangeEvent.emit($event)"
+        >
+
+        <span class="icon"></span>
+
+        <p class="label">{{ option.label }}</p>
+    </label>
+</div>

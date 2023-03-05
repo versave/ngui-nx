@@ -1,0 +1,58 @@
+@use "/ui/src/lib/styles/layout-variables" as *;
+@use "/ui/src/lib/styles/color-variables" as *;
+
+$radio-size: 16px;
+
+.container {
+    label {
+        + label {
+            margin-top: $spacing-xxs;
+        }
+    }
+
+    &.invalid {
+        .label {
+            color: $color-red;
+        }
+    }
+}
+
+label {
+    display: flex;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+}
+
+.icon {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: $radio-size;
+    height: $radio-size;
+    margin-right: $spacing-xxs;
+    border: 1px solid $color-gray;
+    border-radius: 50%;
+
+    &:after {
+        content: '';
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        background: $color-black;
+        opacity: 0;
+    }
+}
+
+.checked {
+    .icon {
+        border-color: $color-black;
+
+        &:after {
+            opacity: 1;
+        }
+    }
+}

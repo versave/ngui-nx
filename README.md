@@ -8,8 +8,10 @@
 
 Run `nx serve ngui-nx` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-- Run `npx nx g c {componentName} --standalone` to generate a new standalone component.
-- Run `npx nx g c {componentName} --standalone --project={projectName}` to generate a new standalone component in a specific project.
+Run `npx nx g c {componentName}` to generate a new component.
+- `--standalone` for a standalone component.
+- `--changeDetection=OnPush` for a component with OnPush change detection.
+- `--project={projectName}` to generate a component in a specific project.
 
 ## Understand this workspace
 
