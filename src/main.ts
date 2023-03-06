@@ -9,3 +9,4 @@ import { appRoutes } from './app/app.routes';
 bootstrapApplication(AppComponent, {
   providers: [provideRouter(appRoutes, withEnabledBlockingInitialNavigation())],
 }).catch((err) => console.error(err));
+
