@@ -1,10 +1,15 @@
-import { Meta, Story } from '@storybook/angular';
+import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { CheckboxComponent } from './checkbox.component';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 export default {
     title: 'Form/Checkbox',
     component: CheckboxComponent,
+    decorators: [
+        moduleMetadata({
+            imports: [ReactiveFormsModule],
+        }),
+    ],
 } as Meta;
 
 const CheckboxStory: Story = (args) => ({
@@ -15,5 +20,5 @@ Primary.args = {
     label: 'I agree to the terms and conditions',
     loading: false,
     disabled: false,
-    formControl: new FormControl(false, [Validators.requiredTrue]),
+    customControl: new FormControl(false, [Validators.requiredTrue]),
 } as CheckboxComponent;

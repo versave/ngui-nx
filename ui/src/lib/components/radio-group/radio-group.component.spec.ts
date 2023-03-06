@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RadioGroupComponent } from './radio-group.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('RadioComponent', () => {
     let component: RadioGroupComponent;
@@ -8,7 +9,8 @@ describe('RadioComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [RadioGroupComponent],
+            declarations: [RadioGroupComponent],
+            imports: [ReactiveFormsModule],
         }).compileComponents();
 
         fixture = TestBed.createComponent(RadioGroupComponent);

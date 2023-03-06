@@ -1,10 +1,15 @@
-import { Meta, Story } from '@storybook/angular';
+import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { SelectComponent } from './select.component';
-import { FormControl } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 export default {
     title: 'Form/Select',
     component: SelectComponent,
+    decorators: [
+        moduleMetadata({
+            imports: [ReactiveFormsModule],
+        }),
+    ],
 } as Meta;
 
 const options = [
@@ -20,5 +25,5 @@ export const Primary = SelectStory.bind({});
 Primary.args = {
     options,
     label: 'Gender',
-    formControl: new FormControl(options[0].value),
+    customControl: new FormControl(options[0].value),
 } as SelectComponent;

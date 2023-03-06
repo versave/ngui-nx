@@ -1,15 +1,11 @@
-import { ActivationEnd, Router, RouterModule } from '@angular/router';
+import { ActivationEnd, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ShellComponent } from './components/shell/shell.component';
-import { CommonModule, NgTemplateOutlet } from '@angular/common';
-import { filter, map } from 'rxjs';
+import { distinctUntilChanged, filter, map } from 'rxjs';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { MetaHandlerService } from './services/meta-handler/meta-handler.service';
+import { MetaHandlerService } from './shared/services/meta-handler/meta-handler.service';
 
 @UntilDestroy()
 @Component({
-    standalone: true,
-    imports: [CommonModule, RouterModule, ShellComponent, NgTemplateOutlet],
     selector: 'ngui-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
@@ -28,6 +24,7 @@ export class AppComponent implements OnInit {
             .pipe(
                 filter((event: any) => event instanceof ActivationEnd),
                 map((event: ActivationEnd) => event?.snapshot?.data),
+                distinctUntilChanged((a, b) => JSON.stringify(a) === JSON.stringify(b)),
                 untilDestroyed(this)
             )
             .subscribe((routeData) => {

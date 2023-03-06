@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckboxComponent } from './checkbox.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('CheckboxComponent', () => {
     let component: CheckboxComponent;
@@ -8,7 +9,8 @@ describe('CheckboxComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [CheckboxComponent],
+            declarations: [CheckboxComponent],
+            imports: [ReactiveFormsModule],
         }).compileComponents();
 
         fixture = TestBed.createComponent(CheckboxComponent);

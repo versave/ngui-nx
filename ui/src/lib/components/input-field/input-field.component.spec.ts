@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputFieldComponent } from './input-field.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('InputFieldComponent', () => {
     let component: InputFieldComponent;
@@ -8,7 +9,8 @@ describe('InputFieldComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [InputFieldComponent],
+            declarations: [InputFieldComponent],
+            imports: [ReactiveFormsModule],
         }).compileComponents();
 
         fixture = TestBed.createComponent(InputFieldComponent);

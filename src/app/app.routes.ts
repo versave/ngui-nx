@@ -3,11 +3,11 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
     {
         path: '',
-        loadComponent: () => import('./pages/home/home.component').then((mod) => mod.HomeComponent),
+        loadChildren: () => import('./modules/home/home.module').then((mod) => mod.HomeModule),
     },
     {
         path: '**',
-        loadComponent: () => import('./pages/not-found/not-found.component').then((mod) => mod.NotFoundComponent),
+        loadChildren: () => import('./modules/not-found/not-found.module').then((mod) => mod.NotFoundModule),
         data: {
             useShell: false,
         },

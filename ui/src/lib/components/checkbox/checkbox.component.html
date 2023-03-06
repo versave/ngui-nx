@@ -1,10 +1,10 @@
 <label class="container"
-       [class.checked]="!!formControl.value"
+       [class.checked]="!!customControl.value"
        [class.invalid]="!checkboxValid()"
        [class.loading]="loading"
        [class.disabled]="disabled"
 >
-    <input type="checkbox" [formControl]="formControl" (ngModelChange)="checkboxChange.emit($event)">
+    <input type="checkbox" [formControl]="customControl" (ngModelChange)="checkboxChange.emit($event)">
 
     <span class="icon"></span>
 
