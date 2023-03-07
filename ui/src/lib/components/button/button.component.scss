@@ -1,6 +1,6 @@
-@use "/ui/src/lib/styles/layout-variables" as *;
-@use "/ui/src/lib/styles/color-variables" as *;
-@use "/ui/src/lib/styles/typography-variables" as *;
+@use "../../styles/layout-variables" as *;
+@use "../../styles/color-variables" as *;
+@use "../../styles/typography-variables" as *;
 
 .button {
     display: inline-block;
