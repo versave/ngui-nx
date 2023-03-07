@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './modules/layout/layout.module';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
     declarations: [AppComponent],
@@ -13,6 +14,7 @@ import { LayoutModule } from './modules/layout/layout.module';
             initialNavigation: 'enabledBlocking',
         }),
         LayoutModule,
+        ScullyLibModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

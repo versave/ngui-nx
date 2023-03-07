@@ -1,0 +1,11 @@
+identifier: l2ebybnak256y5s4
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+homeFolder: /Users/vszhivkov/Private work/ngui-nx
+distFolder: ./dist/ngui-nx
+outDir: /Users/vszhivkov/Private work/ngui-nx/dist/static
+handle404: ''
+allowErrorCollect: false
+projectName: ngui-nx
