@@ -10,6 +10,7 @@
         "e2e": "nx e2e e2e",
         "e2e:watch": "nx e2e e2e --watch",
         "scully": "npx scully --cf scully.ngui-nx.config.ts",
+        "scully:serve": "npx scully serve --cf scully.ngui-nx.config.ts",
         "ui:storybook:dev": "nx run ui:storybook",
         "ui:storybook:build": "nx run ui:build-storybook",
         "ui:test": "nx run ui:test",

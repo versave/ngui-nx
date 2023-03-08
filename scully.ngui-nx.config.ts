@@ -7,7 +7,7 @@ export const config: ScullyConfig = {
     distFolder: './dist/ngui-nx', // output directory of your Angular build artifacts
     outDir: './dist/static', // directory for scully build artifacts
     defaultPostRenderers: [],
-    extraRoutes: ['/404'],
+    extraRoutes: ['/', '/about', '/404'],
     routes: {},
     target: 'targets',
 };
